@@ -11,21 +11,20 @@ featured-img: caddy
 ---
 ```
 # Caddy Server
-___
+
 ## What is CaddyServer?
   Caddy server is a simple, yet HEAVILY extensible webserver written in go.
   When you install caddyserver, it will download only a singl e bianry and give it the proper permissions. Be default this program will not have extensions builtin, but they can easily be added on the website.
 
   But also, CaddyServer will automatically get a VALID SSL CERTIFICATE from `letsencrypt.org` for your domain. 
   ##### Note: this will not work for a domain that is not exposed to the clear internet. Which means LAN (local area network) IP Adresses and custom DNS configs will not get a ssl certificate
-___
+
 ## How does it work and what requirments does it have?
   It works by making a simple webserver for displaying static content like most webservers. It can also handle PHP in pretty much the same way `nginx` does. 
   It has verry little in the way of requirements, pretty much just have a supported CPU and system. which to say the least, the only desktop pc platform it cant run on that i know of, is DOS. Purely because it uses a 16bit architecture and no one wants to support that.
 
   The program is opensource and written in `golang` so if youve had expirence with golang, you can make edits as you wish.
 
-___
 ## Use cases?
 There are a multitude of usecases for caddyserver, one of which that I (The author of this article) uses alot, is for quickly testing html/js based applications
 ## How does one install?
