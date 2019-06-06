@@ -45,5 +45,5 @@ Persay you want to have a universal config that you can import to save you time 
   index index.html
   log     ./Caddylog
   errors  ./Caddyerr
-]
+}
 ```
