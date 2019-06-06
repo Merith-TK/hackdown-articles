@@ -31,5 +31,19 @@ There are a multitude of usecases for caddyserver, one of which that I (The auth
   Simple really, just head on over to [Their download page](https://caddyserver.com/download) and follow the instructions!
   
   There are a few ways to configure caddy beyond the defaults you get when you run the command. 
-  For example. persay you are trying to test a html application that needs some specifc server side settings and the files are stored at `/home/user/projects/html-app/`. make a file in the application folder named `Caddyfile`, caddy will look for this file in its current working directory, and if it exists, use that configuration. 
-  OR you can specify a Caddyfile that is somewhere else on your system by using the `-conf` flag like so `caddy -conf /home/user/caddyfiles/php` and it will load that specific config file. I use this to keep myself from writing the same lines of code over and over and just have specific config files for each of these tasks.
+  For example. persay you are trying to test a html application that needs some specifc server side settings and the files are stored at `/home/user/projects/html-app/`. 
+  Make a file in the application folder named `Caddyfile`, caddy will look for this file in its current working directory, and if it exists, use that configuration. 
+  Or you can specify a different Caddyfile that is somewhere else on your system by using the `-conf` flag like so, `caddy -conf /home/user/caddyfiles/basic` and it will load that specific config file. I use this to keep myself from writing the same lines of code over and over and just have specific config files for each of these tasks.
+
+Persay you want to have a universal config that you can import to save you time for example, `php`. Make the file with the php caddy config, `/home/user/caddyfiles/php` and add this to the appropriete location in your original Caddyfile `import /home/user/caddyfiles/php`
+
+### DISCLAIMER: You must manually make these configs yourself
+
+## Example Caddyfile. 
+```
+:80 {
+  index index.html
+  log     ./Caddylog
+  errors  ./Caddyerr
+]
+```
